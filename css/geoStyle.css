@@ -1,0 +1,52 @@
+#spiky-geo--wrapper
+{
+    padding: 25px 35px 25px 35px;
+    background-color: white;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 99999;
+    max-height: calc(100vh - 20px);
+    display: none;
+    max-width: 100%;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+}
+#spiky-geo--header
+{
+    margin-bottom: 50px;
+}
+#spiky-geo--content
+{
+    margin-bottom: 50px;
+}
+#spiky-geo--header h2
+{
+    text-align: center;
+}
+#spiky-geo--content p
+{
+    text-align: center;
+}
+#spiky-geo--footer
+{
+    display: flex;
+    justify-content: center;
+}
+#geo-buttons button
+{
+    margin-bottom: 0;
+    text-align: center;
+    background-color: #35b5d3;
+    color: white;
+    width: 180px;
+    text-wrap: nowrap;
+}
+#redirectButton
+{
+    margin-right: 10px;
+}
+#stayButton
+{
+    margin-left: 10px;
+}
