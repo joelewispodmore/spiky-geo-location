@@ -11,6 +11,8 @@
     max-width: 100%;
     height: auto;
     transform: translateX(-50%) translateY(-50%);
+    filter: drop-shadow(0px 0px 20px black);
+    border-radius: 15px;
 }
 #spiky-geo--header
 {
@@ -41,6 +43,7 @@
     color: white;
     width: 180px;
     text-wrap: nowrap;
+    filter: drop-shadow(0px 3px 3px black);
 }
 #redirectButton
 {
