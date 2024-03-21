@@ -35,11 +35,11 @@
             {
                 redirectLoc = "UK";
             }
-            $content.text('You appear to be in the ' + redirectLoc +
-                            ', please switch to the ' + redirectLoc +
-                            ' site for ' + redirectLoc +
-                            ' shipping.');
+            $content.text('You appear to be in the ' + redirectLoc + '. \n' +
+                            'Please visit the ' + redirectLoc +
+                            ' site.');
             $redirectButton.text("Go to " + redirectLoc + " site");
             popup.style.display = 'block';
+            $('.lightboxBg').css('display', 'block');
         }
     });

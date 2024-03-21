@@ -13,18 +13,22 @@ if (!defined('ABSPATH'))
 }
 add_action('wp_enqueue_scripts', 'callback_for_setting_up_scripts');
 function callback_for_setting_up_scripts() {
-    wp_enqueue_style( 'geoStyle', plugins_url('css/geoStyle.css', __FILE__), false, '1.0.1', 'all');
+    wp_enqueue_style( 'geoStyle', plugins_url('css/geoStyle.css', __FILE__), false, '1.0.2', 'all');
 }
 add_action( 'wp_footer', 'load_geo_script' );
 function load_geo_script(){
     if( !is_admin() ){
 ?>
+            <div class="lightboxBg"></div>
             <div id="spiky-geo--wrapper">
                 <div id="spiky-geo--inside">
                     <div id="spiky-geo--header">
                         <h2>
                             Location Notice
                         </h2>
+                        <button onclick="closeButton()" class="close">
+                            &#x2715;
+                        </button>
                     </div>
                     <div id="spiky-geo--content">
                         <p>
@@ -33,9 +37,6 @@ function load_geo_script(){
                     <div id="spiky-geo--footer">
                         <div id="geo-buttons">
                             <button id="redirectButton">
-                            </button>
-                            <button id="stayButton">
-                                Stay here
                             </button>
                         </div>
                     </div>
@@ -66,7 +67,8 @@ function load_geo_script(){
             endwhile;
             wp_reset_postdata();
         endif;
-        wp_enqueue_script( 'spiky_geo_script', plugins_url('js/geo.js', __FILE__), false, '1.0.1', 'all');
+        wp_enqueue_script( 'spiky_geo_script', plugins_url('js/geo.js', __FILE__), false, '1.0.2', 'all');
+        wp_enqueue_script( 'spiky_ui_script', plugins_url('js/UI.js', __FILE__), false, '1.0.1', 'all');
         wp_localize_script( 'spiky_geo_script', 'php_vars', array( 'leftHand' => $leftHand ,
                 'rightHand' => $rightHand)
         );

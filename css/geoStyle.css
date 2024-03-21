@@ -1,6 +1,6 @@
 #spiky-geo--wrapper
 {
-    padding: 25px 35px 25px 35px;
+    padding: 50px 40px 50px 50px;
     background-color: white;
     position: fixed;
     left: 50%;
@@ -8,27 +8,31 @@
     z-index: 99999;
     max-height: calc(100vh - 20px);
     display: none;
-    max-width: 100%;
+    width: 500px;
     height: auto;
     transform: translateX(-50%) translateY(-50%);
-    filter: drop-shadow(0px 0px 20px black);
     border-radius: 15px;
 }
 #spiky-geo--header
 {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 #spiky-geo--content
 {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
 }
 #spiky-geo--header h2
 {
     text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.4em;
 }
 #spiky-geo--content p
 {
     text-align: center;
+    white-space: pre-line;
 }
 #spiky-geo--footer
 {
@@ -41,15 +45,39 @@
     text-align: center;
     background-color: #35b5d3;
     color: white;
-    width: 180px;
+    width: 200px;
     text-wrap: nowrap;
-    filter: drop-shadow(0px 3px 3px black);
+    border-radius: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: .85em;
 }
-#redirectButton
+.close
 {
-    margin-right: 10px;
+    position: absolute;
+    top: 5%;
+    right: 2%;
+    font-size: 20px;
 }
-#stayButton
+
+@media (max-width: 900px)
 {
-    margin-left: 10px;
+    #spiky-geo--wrapper
+    {
+        width: 100%;
+        border-radius: 0;
+    }
+}
+.lightboxBg
+{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #0b0b0b;
+    opacity: .6;
+    transition: opacity .3s;
+    z-index: 99998;
+    display: none;
 }
